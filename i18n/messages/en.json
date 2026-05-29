@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "advantages": "Advantages",
+    "contacts": "Contacts",
+    "cta": "Get an estimate"
+  },
+  "hero": {
+    "eyebrow": "Monolithic construction · Yerevan · since 2008",
+    "title": "Monolithic construction",
+    "titleAccent": "for Armenia's leaders",
+    "sub": "For 17 years working with developers, government and large business. From the Armenian NPP to premium residential complexes.",
+    "ctaPrimary": "Get an estimate in 24h",
+    "stats": {
+      "m2": "m² of monolith delivered",
+      "years": "years on the market",
+      "accidents": "accidents",
+      "active": "residential complexes in progress"
+    }
+  },
+  "numbers": {
+    "eyebrow": "By the numbers",
+    "heading": "A scale that speaks for itself",
+    "years": "years on the market",
+    "staff": "employees and engineers",
+    "brigades": "specialized crews",
+    "m2": "m² of monolith delivered",
+    "accidents": "accidents",
+    "onTime": "always ahead of schedule"
+  },
+  "projects": {
+    "eyebrow": "Our projects",
+    "headingLine1": "Residential complexes in Yerevan",
+    "headingLine2": "where we carry out the monolithic works",
+    "viewPhotos": "View photos",
+    "statusWip": "In progress",
+    "statusDone": "Delivered",
+    "unit": "m² of monolith",
+    "items": {
+      "gyurjyan": {
+        "name": "Gyurjyan Cascade",
+        "address": "Nor Nork, Gyurjyan 14/1",
+        "meta": ["18 buildings", "12–16 floors", "6 delivered · 9 under construction"]
+      },
+      "ani": {
+        "name": "Ani Premium",
+        "address": "Adonts 19/4",
+        "meta": ["3 buildings", "16 floors", "delivered · Jan 2026"]
+      },
+      "leningradyan": {
+        "name": "Leningradyan Residence",
+        "address": "Leningradyan 19/12",
+        "meta": ["3 buildings", "16 floors", "−2.5 months ahead"]
+      },
+      "firdus": {
+        "name": "Firdus Prime",
+        "address": "Khanjyan 9/6",
+        "meta": ["PREMIUM", "stage: −2 floor"]
+      },
+      "rubinyants": {
+        "name": "Rubinyants Complex",
+        "address": "Rubinyants 27/16",
+        "meta": ["3 buildings", "16 floors"]
+      }
+    }
+  },
+  "tech": {
+    "eyebrowLeft": "Control at every stage",
+    "techTitle": "Technology",
+    "techItems": [
+      "7 own tower cranes",
+      "4 own mobile cranes",
+      "PERI formwork",
+      "DOKA systems"
+    ],
+    "techNote": "Our own fleet = independence from subcontractors and predictable timelines.",
+    "eyebrowRight": "0 accidents in 17 years",
+    "safetyTitle": "Safety",
+    "safetyItems": [
+      "ZUS protective nets",
+      "Edge Protection System (floor edge protection)",
+      "Protection of stairwells and shafts",
+      "Dust-suppressing eco-nets on sites"
+    ],
+    "safetyAccidents": "accidents",
+    "safetyYears": "years of safe work"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "heading": "A transparent process — from design to handover",
+    "steps": [
+      {
+        "title": "Project analysis",
+        "text": "We study the architectural and engineering design and assess the scope."
+      },
+      {
+        "title": "Resource planning",
+        "text": "Schedule, team, materials and equipment tailored to your site."
+      },
+      {
+        "title": "Construction",
+        "text": "Monolithic works with PERI formwork and DOKA systems."
+      },
+      {
+        "title": "Quality control",
+        "text": "Checks at every stage — geometry, concrete, reinforcement."
+      },
+      {
+        "title": "On-time or early handover",
+        "text": "Documentation and handover of the finished monolith to the client."
+      }
+    ]
+  },
+  "trust": {
+    "eyebrow": "Trusted by",
+    "heading": "350,000+ m² for Armenia's leaders",
+    "govTitle": "Government and large business",
+    "govSub": "Projects for ministries, state corporations and the largest companies.",
+    "govItems": [
+      { "year": "2014", "name": "Ministry of Defence of RA" },
+      { "year": "2016", "name": "Ministry of Education and Science of RA" },
+      { "year": "2022", "name": "Armenian NPP (Metsamor)" },
+      { "year": "2022", "name": "K. Demirchyan Sports Complex" },
+      { "year": "2015–2016", "name": "Veolia Jur · Hayjrmughkoyughi" },
+      { "year": "2014", "name": "ProCredit Bank" },
+      { "year": "2022", "name": "Yandex.Taxi Armenia" },
+      { "year": "2021", "name": "Telecom Armenia" },
+      { "year": "2022", "name": "Hotel Aghveran" }
+    ],
+    "devTitle": "Developers choose us",
+    "devSub": "Partners among the leading developers of Yerevan.",
+    "devItems": [
+      { "year": "2021", "name": "MGS Development" },
+      { "year": "2021", "name": "Modern Town" },
+      { "year": "2021", "name": "ArtCo · artco.am" },
+      { "year": "2022", "name": "San Holding" },
+      { "year": "2022", "name": "De Builders" },
+      { "year": "2022", "name": "SAF Capital" },
+      { "year": "2023", "name": "Binam" },
+      { "year": "2023", "name": "Black Stone" },
+      { "year": "2023", "name": "Atlant Shin" }
+    ],
+    "loyaltyTitle": "They keep coming back",
+    "loyaltySub": "Repeat clients are the best guarantee of quality.",
+    "loyaltyUnit": "yrs",
+    "loyaltyItems": [
+      { "company": "Es-Ti-Service", "text": "has been working with us since 2013." },
+      { "company": "Elektron BBE", "text": "— a regular client since 2015." },
+      { "company": "Diaconia Foundation", "text": "— a recurring client." }
+    ],
+    "loyaltyLine": "They come back — which means we never let them down."
+  },
+  "why": {
+    "eyebrow": "Why us",
+    "heading": "Four reasons to choose Profmonolith",
+    "items": [
+      {
+        "title": "We deliver ahead of schedule",
+        "text": "Consistently 1–2 months, and up to 2.5 months early on large complexes."
+      },
+      {
+        "title": "Strong safety record",
+        "text": "0 accidents in 17 years of work across all our sites."
+      },
+      {
+        "title": "Our own equipment fleet",
+        "text": "Cranes, formwork and machinery we own — independence from subcontractors."
+      },
+      {
+        "title": "Trusted by leaders",
+        "text": "For 17 years developers and the government have chosen us as their contractor."
+      }
+    ]
+  },
+  "licenses": {
+    "eyebrow": "Documents",
+    "heading": "Licenses and certificates",
+    "lead": "Section in progress — document scans will be added.",
+    "soon": "SOON"
+  },
+  "form": {
+    "eyebrow": "For developers",
+    "title": "Get an estimate in 24 hours",
+    "sub": "Tell us about your project — we'll send a monolithic-works estimate within 1 business day. No obligations.",
+    "altLabel": "Or call us directly",
+    "labelName": "Name / Company",
+    "labelPhone": "Phone",
+    "labelEmail": "Email",
+    "labelProject": "Project description",
+    "namePlaceholder": "Developer company «…»",
+    "phonePlaceholder": "+374 __ ______",
+    "emailPlaceholder": "name@company.am",
+    "projectPlaceholder": "Address, number of floors, total monolith area (m²)…",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "consent": "By clicking the button you agree to the processing of your data.",
+    "successMessage": "Thank you! Your request has been received — we'll contact you within 1 business day.",
+    "errorMessage": "Something went wrong. Please try again or call us.",
+    "errors": {
+      "name": "Enter a name (at least 2 characters)",
+      "phone": "Enter a phone number",
+      "email": "Invalid email",
+      "project": "Describe the project (at least 10 characters)"
+    }
+  },
+  "contacts": {
+    "eyebrow": "Contacts",
+    "heading": "Get in touch",
+    "directorLabel": "Director",
+    "directorName": "Arman Karapetyan",
+    "addressLabel": "Address",
+    "addressValue": "Armenia, Yerevan, Griboyedov 54/1",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "siteLabel": "Website",
+    "mapTitle": "Map · Yerevan"
+  },
+  "footer": {
+    "rights": "© 2008 — 2026 PROFMONOLITH LLC. All rights reserved.",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "lightbox": {
+    "close": "Close"
+  },
+  "meta": {
+    "title": "PROFMONOLITH — Monolithic construction for Armenia's leaders",
+    "description": "Monolithic construction in Armenia since 2008. 350,000+ m² delivered, 0 accidents. Contractor for developers, government and large business. Estimate in 24 hours."
+  }
+}
