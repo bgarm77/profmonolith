@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import logoWhite from '@/public/logos/logo-white.png';
 
 const NAV_LINKS = [
@@ -17,6 +17,8 @@ const NAV_LINKS = [
 
 export function Header() {
   const t = useTranslations('nav');
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -48,20 +50,56 @@ export function Header() {
     .filter(Boolean)
     .join(' ');
 
+  // Якорь главной: на главной — обычный плавный скролл (<a>),
+  // с других страниц — переход на главную с тем же якорем (next-intl Link).
+  const Anchor = ({
+    hash,
+    className,
+    onClick,
+    children,
+  }: {
+    hash: string;
+    className?: string;
+    onClick?: () => void;
+    children: ReactNode;
+  }) =>
+    isHome ? (
+      <a href={hash} className={className} onClick={onClick}>
+        {children}
+      </a>
+    ) : (
+      <Link href={`/${hash}`} className={className} onClick={onClick}>
+        {children}
+      </Link>
+    );
+
   return (
     <>
       <header className={navClass} id="nav">
         <div className="container nav__inner">
-          <a href="#top" aria-label="PROFMONOLITH">
-            <Image
-              className="nav__logo"
-              src={logoWhite}
-              alt="PROFMONOLITH"
-              priority
-              height={30}
-              style={{ width: 'auto', height: '30px' }}
-            />
-          </a>
+          {isHome ? (
+            <a href="#top" aria-label="PROFMONOLITH">
+              <Image
+                className="nav__logo"
+                src={logoWhite}
+                alt="PROFMONOLITH"
+                priority
+                height={30}
+                style={{ width: 'auto', height: '30px' }}
+              />
+            </a>
+          ) : (
+            <Link href="/" aria-label="PROFMONOLITH">
+              <Image
+                className="nav__logo"
+                src={logoWhite}
+                alt="PROFMONOLITH"
+                priority
+                height={30}
+                style={{ width: 'auto', height: '30px' }}
+              />
+            </Link>
+          )}
           <nav>
             <ul className="nav__menu">
               {NAV_LINKS.map((l) => (
@@ -69,7 +107,7 @@ export function Header() {
                   {l.page ? (
                     <Link href={l.href}>{t(l.key)}</Link>
                   ) : (
-                    <a href={l.href}>{t(l.key)}</a>
+                    <Anchor hash={l.href}>{t(l.key)}</Anchor>
                   )}
                 </li>
               ))}
@@ -77,9 +115,9 @@ export function Header() {
           </nav>
           <div className="nav__right">
             <LanguageSwitcher />
-            <a href="#lead" className="btn btn--primary nav__cta">
+            <Anchor hash="#lead" className="btn btn--primary nav__cta">
               {t('cta')}
-            </a>
+            </Anchor>
             <button
               type="button"
               className={drawerOpen ? 'burger is-open' : 'burger'}
@@ -102,14 +140,14 @@ export function Header() {
               {t(l.key)}
             </Link>
           ) : (
-            <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>
+            <Anchor key={l.href} hash={l.href} onClick={() => setDrawerOpen(false)}>
               {t(l.key)}
-            </a>
+            </Anchor>
           )
         )}
-        <a href="#lead" className="btn btn--primary btn--lg" onClick={() => setDrawerOpen(false)}>
+        <Anchor hash="#lead" className="btn btn--primary btn--lg" onClick={() => setDrawerOpen(false)}>
           {t('cta')}
-        </a>
+        </Anchor>
       </div>
     </>
   );
