@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
 import { CountUp } from '@/components/ui/CountUp';
 import { PhoneIcon } from '@/components/icons';
@@ -16,6 +16,7 @@ const STATS: Stat[] = [
 
 export function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
 
   return (
     <section className="hero" id="top">
@@ -43,7 +44,7 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal delay={0.16}>
-            <h1>
+            <h1 className={locale === 'hy' ? 'h1--hy' : undefined}>
               {t('title')}
               <br />
               <span className="accent">{t('titleAccent')}</span>

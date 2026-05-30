@@ -411,8 +411,12 @@ button {
     linear-gradient(160deg, #0d1822 0%, #173353 48%, #204266 100%);
   color: #fff;
   overflow: hidden;
-  padding-top: clamp(150px, 18vh, 220px);
-  padding-bottom: 0;
+  /* Весь первый экран помещается в один viewport (svh — фикс для мобильного Safari) */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-block: clamp(80px, 12vh, 140px);
 }
 .hero__media {
   position: absolute;
@@ -440,49 +444,71 @@ button {
   opacity: 0.05;
   mix-blend-mode: screen;
 }
+/* Контент центрируется по вертикали в оставшемся пространстве, статы — снизу */
 .hero__inner {
   position: relative;
   z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .hero__content {
-  max-width: 760px;
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-/* адаптивный логотип (исправление inline width:709px) */
+/* адаптивный логотип — компактнее и по центру */
 .hero__logo {
   width: 100%;
-  max-width: clamp(280px, 50vw, 720px);
+  max-width: clamp(260px, 32vw, 480px);
   height: auto;
-  margin: 0 0 30px;
+  margin: 0 auto;
+}
+.hero .eyebrow {
+  margin: 24px 0 16px;
 }
 .hero h1 {
   font-weight: 800;
-  font-size: clamp(28px, 5.5vw, 56px);
-  line-height: 1.04;
+  font-size: clamp(32px, 4.5vw, 64px);
+  line-height: 1.1;
   letter-spacing: -0.025em;
-  margin: 0;
+  margin: 16px auto 12px;
+  max-width: 1100px;
   text-wrap: balance;
+}
+/* Армянский заголовок длиннее — чуть мельче, чтобы уложиться в 2 строки */
+.hero h1.h1--hy {
+  font-size: clamp(28px, 4vw, 56px);
 }
 .hero h1 .accent {
   color: var(--steel-light);
 }
 .hero__sub {
-  font-size: clamp(17px, 1.7vw, 22px);
+  font-size: clamp(15px, 1.3vw, 18px);
   color: rgba(255, 255, 255, 0.82);
-  max-width: 60ch;
-  margin: 26px 0 0;
+  max-width: 680px;
+  margin: 0 auto 28px;
   line-height: 1.55;
 }
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 4px;
+}
+.hero__actions .btn {
+  min-height: 56px;
 }
 
 .hero__stats {
   position: relative;
   z-index: 2;
-  margin-top: clamp(56px, 8vw, 96px);
+  margin-top: clamp(36px, 5vh, 64px);
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
