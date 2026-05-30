@@ -12,8 +12,8 @@ export const site = {
   facebook: '#',
   instagram: '#',
   // Координаты офиса (Ереван, Грибоедова 54/1)
-  geo: { lat: 40.185, lng: 44.515 },
+  geo: { lat: 40.213509, lng: 44.515471 },
   // OpenStreetMap embed (как в дизайне; на Vercel работает без ключа)
   mapEmbed:
-    'https://www.openstreetmap.org/export/embed.html?bbox=44.48%2C40.17%2C44.55%2C40.20&layer=mapnik&marker=40.185%2C44.515',
+    'https://www.openstreetmap.org/export/embed.html?bbox=44.510471%2C40.210509%2C44.520471%2C40.216509&layer=mapnik&marker=40.213509%2C44.515471',
 } as const;
