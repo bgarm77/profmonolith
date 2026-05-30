@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { href: '#top', key: 'home', page: false },
   { href: '#projects', key: 'projects', page: false },
   { href: '#why', key: 'advantages', page: false },
-  { href: '/safety', key: 'safety', page: true },
   { href: '#contacts', key: 'contacts', page: false },
 ] as const;
 

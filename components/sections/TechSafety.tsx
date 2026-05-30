@@ -57,7 +57,6 @@ export function TechSafety() {
               </span>
               {t('qualityTitle')}
             </h3>
-            <p className="ts-sub">{t('qualitySub')}</p>
             <ul className="ts-quality-list">
               {qualityItems.map((item, i) => {
                 const Icon = QUALITY_ICONS[i];

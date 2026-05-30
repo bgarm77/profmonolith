@@ -4,6 +4,7 @@ import { Footer } from '@/components/ui/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Numbers } from '@/components/sections/Numbers';
 import { Projects } from '@/components/sections/Projects';
+import { Safety } from '@/components/sections/Safety';
 import { TechSafety } from '@/components/sections/TechSafety';
 import { Process } from '@/components/sections/Process';
 import { Trust } from '@/components/sections/Trust';
@@ -31,6 +32,7 @@ export default async function HomePage({
         <Numbers />
         {/* Projects — серверный компонент (читает фото с диска) */}
         <Projects />
+        <Safety />
         <TechSafety />
         <Process />
         <Trust />

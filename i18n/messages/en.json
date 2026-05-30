@@ -3,7 +3,6 @@
     "home": "Home",
     "projects": "Projects",
     "advantages": "Advantages",
-    "safety": "Safety",
     "contacts": "Contacts",
     "cta": "Get an estimate"
   },
@@ -77,8 +76,7 @@
     ],
     "techNote": "Our own fleet = independence from subcontractors and predictable timelines.",
     "eyebrowRight": "Quality Standard",
-    "qualityTitle": "Quality",
-    "qualitySub": "Every monolithic structure passes three-level quality control — from geometry to compliance with international standards.",
+    "qualityTitle": "Quality standards",
     "qualityItems": [
       {
         "title": "Structural precision",
@@ -86,11 +84,11 @@
       },
       {
         "title": "Geodetic monitoring",
-        "text": "Laser measurements and total-station surveys on every floor"
+        "text": "Geodetic measurements at every elevation level"
       },
       {
         "title": "Internal engineering supervision",
-        "text": "In-house engineers on every site — independent verification"
+        "text": "In-house engineers on every site — internal supervision."
       }
     ],
     "qualityStdLabel": "Maximum deviations within the standards:",
@@ -99,7 +97,7 @@
   "safety": {
     "eyebrow": "05 · Safety",
     "title": "SAFETY IS OUR TOP PRIORITY",
-    "imageAlt": "ЗУС защитные сетки на объекте Гюрджян Каскад",
+    "imageAlt": "Safety catch nets on Gyurjyan Cascade site",
     "block1Title": "Catch-and-arrest safety net",
     "block1Sub": "Safety catch-and-arrest net system",
     "block1Text1": "The catch-and-arrest net is designed to stop people and objects falling from a height of 6–10 meters, preventing injuries on the construction site and the adjacent area.",
