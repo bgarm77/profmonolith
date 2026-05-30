@@ -183,6 +183,48 @@ export function DustNetIcon(props: IconProps) {
   );
 }
 
+export function QualityIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...stroke} {...props}>
+      <circle cx="12" cy="9" r="6" />
+      <path d="M9 9l2 2 4-4" />
+      <path d="M9 14.5 7.5 22l4.5-2.7L16.5 22 15 14.5" />
+    </svg>
+  );
+}
+
+export function TargetIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...stroke} {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="4.5" />
+      <circle cx="12" cy="12" r="0.6" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function GeodesyIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...stroke} {...props}>
+      <path d="M12 2v3" />
+      <rect x="8" y="5" width="8" height="6" rx="1" />
+      <path d="M12 11v4" />
+      <path d="M5 21l7-6 7 6" />
+      <path d="M12 8h.01" />
+    </svg>
+  );
+}
+
+export function SupervisionIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...stroke} {...props}>
+      <rect x="5" y="3" width="14" height="18" rx="2" />
+      <path d="M9 3h6v3H9z" />
+      <path d="M8.5 13l2 2 4-4" />
+    </svg>
+  );
+}
+
 export function FileIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" {...stroke} strokeWidth={1.5} {...props}>

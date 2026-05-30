@@ -934,26 +934,151 @@ button {
   font-size: 15px;
   font-style: italic;
 }
-.ts-safety-stat {
-  margin-top: 30px;
-  display: flex;
-  gap: 36px;
-  flex-wrap: wrap;
-  padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+/* подзаголовок-описание правой колонки (Качество) */
+.ts-sub {
+  margin: -8px 0 24px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 46ch;
 }
-.ts-safety-stat .num {
-  font-family: var(--ff-tech);
-  font-weight: 700;
-  font-size: clamp(40px, 5vw, 60px);
-  line-height: 1;
+/* список «Качество»: иконка + заголовок + описание */
+.ts-quality-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.ts-quality-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ts-quality-list .qic {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.ts-quality-list .qic svg {
+  width: 21px;
+  height: 21px;
+  stroke: rgba(255, 255, 255, 0.85);
+}
+.ts-quality-list .qt {
+  font-size: 16.5px;
+  font-weight: 600;
   color: #fff;
 }
-.ts-safety-stat .lab {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.66);
-  margin-top: 8px;
-  max-width: 16ch;
+.ts-quality-list .qd {
+  margin-top: 4px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* строка стандартов */
+.ts-standards {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.ts-standards__label {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.ts-standards__line {
+  margin: 0;
+  font-family: var(--ff-tech);
+  font-weight: 600;
+  font-size: clamp(12px, 1.4vw, 15px);
+  letter-spacing: 0.04em;
+  color: var(--steel-light);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   /safety — отдельная страница
+   ============================================================ */
+.safety-page {
+  padding-top: clamp(96px, 12vw, 150px);
+}
+.safety-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.safety-media {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--navy);
+  aspect-ratio: 3 / 4;
+}
+.safety-media__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.safety-text {
+  display: grid;
+  gap: clamp(26px, 3vw, 40px);
+  align-content: start;
+}
+.safety-block__title {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.safety-block__sub {
+  margin: 6px 0 16px;
+  font-family: var(--ff-tech);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.safety-block__p {
+  margin: 0 0 14px;
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+.safety-block__p:last-child {
+  margin-bottom: 0;
+}
+.safety-stats {
+  margin-top: clamp(44px, 6vw, 72px);
+  display: flex;
+  gap: clamp(40px, 8vw, 96px);
+  flex-wrap: wrap;
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 2px solid var(--navy);
+}
+.safety-stat__num {
+  font-family: var(--ff-tech);
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 104px);
+  line-height: 0.9;
+  color: var(--navy);
+}
+.safety-stat__lab {
+  margin-top: 12px;
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: var(--ink-soft);
+  max-width: 18ch;
 }
 
 /* ============================================================
@@ -1520,6 +1645,12 @@ button {
   }
   .ts-grid {
     grid-template-columns: 1fr;
+  }
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
+  .safety-media {
+    aspect-ratio: 4 / 3;
   }
   .form-grid {
     grid-template-columns: 1fr;

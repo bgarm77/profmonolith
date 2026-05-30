@@ -1,27 +1,25 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
-import { CountUp } from '@/components/ui/CountUp';
 import {
   ToolIcon,
-  ShieldIcon,
+  QualityIcon,
   CraneIcon,
   TruckCraneIcon,
   FormworkIcon,
   SystemIcon,
-  NetIcon,
-  EdgeIcon,
-  StairsIcon,
-  DustNetIcon,
+  TargetIcon,
+  GeodesyIcon,
+  SupervisionIcon,
 } from '@/components/icons';
 
 const TECH_ICONS = [CraneIcon, TruckCraneIcon, FormworkIcon, SystemIcon];
 const TECH_VENDORS = [null, null, 'PERI · DE', 'DOKA · AT'];
-const SAFETY_ICONS = [NetIcon, EdgeIcon, StairsIcon, DustNetIcon];
+const QUALITY_ICONS = [TargetIcon, GeodesyIcon, SupervisionIcon];
 
 export function TechSafety() {
   const t = useTranslations('tech');
   const techItems = t.raw('techItems') as string[];
-  const safetyItems = t.raw('safetyItems') as string[];
+  const qualityItems = t.raw('qualityItems') as { title: string; text: string }[];
 
   return (
     <section className="section dark-block">
@@ -55,34 +53,30 @@ export function TechSafety() {
             <p className="eyebrow eyebrow--on-dark">{t('eyebrowRight')}</p>
             <h3>
               <span className="ic">
-                <ShieldIcon />
+                <QualityIcon />
               </span>
-              {t('safetyTitle')}
+              {t('qualityTitle')}
             </h3>
-            <ul className="ts-list">
-              {safetyItems.map((item, i) => {
-                const Icon = SAFETY_ICONS[i];
+            <p className="ts-sub">{t('qualitySub')}</p>
+            <ul className="ts-quality-list">
+              {qualityItems.map((item, i) => {
+                const Icon = QUALITY_ICONS[i];
                 return (
-                  <li key={item}>
-                    <Icon />
-                    {item}
+                  <li key={item.title}>
+                    <span className="qic">
+                      <Icon />
+                    </span>
+                    <div>
+                      <div className="qt">{item.title}</div>
+                      <div className="qd">{item.text}</div>
+                    </div>
                   </li>
                 );
               })}
             </ul>
-            <div className="ts-safety-stat">
-              <div>
-                <div className="num">
-                  <CountUp to={0} />
-                </div>
-                <div className="lab">{t('safetyAccidents')}</div>
-              </div>
-              <div>
-                <div className="num">
-                  <CountUp to={17} />
-                </div>
-                <div className="lab">{t('safetyYears')}</div>
-              </div>
+            <div className="ts-standards">
+              <p className="ts-standards__label">{t('qualityStdLabel')}</p>
+              <p className="ts-standards__line">{t('qualityStandards')}</p>
             </div>
           </Reveal>
         </div>

@@ -4,13 +4,15 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { Link } from '@/i18n/navigation';
 import logoWhite from '@/public/logos/logo-white.png';
 
 const NAV_LINKS = [
-  { href: '#top', key: 'home' },
-  { href: '#projects', key: 'projects' },
-  { href: '#why', key: 'advantages' },
-  { href: '#contacts', key: 'contacts' },
+  { href: '#top', key: 'home', page: false },
+  { href: '#projects', key: 'projects', page: false },
+  { href: '#why', key: 'advantages', page: false },
+  { href: '/safety', key: 'safety', page: true },
+  { href: '#contacts', key: 'contacts', page: false },
 ] as const;
 
 export function Header() {
@@ -64,7 +66,11 @@ export function Header() {
             <ul className="nav__menu">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href}>{t(l.key)}</a>
+                  {l.page ? (
+                    <Link href={l.href}>{t(l.key)}</Link>
+                  ) : (
+                    <a href={l.href}>{t(l.key)}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -90,11 +96,17 @@ export function Header() {
       </header>
 
       <div className={drawerOpen ? 'drawer is-open' : 'drawer'} id="drawer">
-        {NAV_LINKS.map((l) => (
-          <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>
-            {t(l.key)}
-          </a>
-        ))}
+        {NAV_LINKS.map((l) =>
+          l.page ? (
+            <Link key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>
+              {t(l.key)}
+            </Link>
+          ) : (
+            <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>
+              {t(l.key)}
+            </a>
+          )
+        )}
         <a href="#lead" className="btn btn--primary btn--lg" onClick={() => setDrawerOpen(false)}>
           {t('cta')}
         </a>

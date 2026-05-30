@@ -3,6 +3,7 @@
     "home": "Home",
     "projects": "Projects",
     "advantages": "Advantages",
+    "safety": "Safety",
     "contacts": "Contacts",
     "cta": "Get an estimate"
   },
@@ -75,16 +76,41 @@
       "DOKA systems"
     ],
     "techNote": "Our own fleet = independence from subcontractors and predictable timelines.",
-    "eyebrowRight": "0 accidents in 17 years",
-    "safetyTitle": "Safety",
-    "safetyItems": [
-      "ZUS protective nets",
-      "Edge Protection System (floor edge protection)",
-      "Protection of stairwells and shafts",
-      "Dust-suppressing eco-nets on sites"
+    "eyebrowRight": "Quality Standard",
+    "qualityTitle": "Quality",
+    "qualitySub": "Every monolithic structure passes three-level quality control — from geometry to compliance with international standards.",
+    "qualityItems": [
+      {
+        "title": "Structural precision",
+        "text": "Monolith geometry within international standards tolerances"
+      },
+      {
+        "title": "Geodetic monitoring",
+        "text": "Laser measurements and total-station surveys on every floor"
+      },
+      {
+        "title": "Internal engineering supervision",
+        "text": "In-house engineers on every site — independent verification"
+      }
     ],
-    "safetyAccidents": "accidents",
-    "safetyYears": "years of safe work"
+    "qualityStdLabel": "Maximum deviations within the standards:",
+    "qualityStandards": "ՀՀՇՆ 20.04-2020  ·  ACI 117-10 (USA)  ·  СП 70.13330.2012"
+  },
+  "safety": {
+    "eyebrow": "05 · Safety",
+    "title": "SAFETY IS OUR TOP PRIORITY",
+    "imageAlt": "ЗУС защитные сетки на объекте Гюрджян Каскад",
+    "block1Title": "Catch-and-arrest safety net",
+    "block1Sub": "Safety catch-and-arrest net system",
+    "block1Text1": "The catch-and-arrest net is designed to stop people and objects falling from a height of 6–10 meters, preventing injuries on the construction site and the adjacent area.",
+    "block1Text2": "The nets are installed around the entire perimeter of the building, providing an additional level of protection for both workers and the surrounding area.",
+    "block2Title": "Edge protection",
+    "block2Sub": "Edge Protection System",
+    "block2Text": "The entire perimeter of each floor is enclosed with metal or wooden protective railings, preventing the risk of workers falling from height.",
+    "statAccidentsValue": "0",
+    "statAccidents": "accidents",
+    "statYearsValue": "17",
+    "statYears": "years of safe operations"
   },
   "process": {
     "eyebrow": "How we work",
