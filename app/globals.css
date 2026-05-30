@@ -1028,13 +1028,31 @@ button {
   background: var(--navy-deep);
   min-height: 340px;
 }
-.safety-media__img {
+/* счётчик-бейдж «сколько фото в галерее» */
+.safety-media__count {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(13, 24, 34, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-family: var(--ff-tech);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+.safety-media__count svg {
+  width: 15px;
+  height: 15px;
+  stroke: #fff;
 }
 .safety-text {
   display: flex;

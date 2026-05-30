@@ -1,11 +1,20 @@
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Reveal } from '@/components/ui/Reveal';
 import { NetIcon, EdgeIcon } from '@/components/icons';
-import safetyPhoto from '@/public/photos/safety/01_gyurjyan_security_03.webp';
+import { SafetyGallery } from '@/components/ui/SafetyGallery';
+import { getProjectPhotosWithDims } from '@/lib/projects';
 
-export function Safety() {
-  const t = useTranslations('safety');
+export async function Safety() {
+  const t = await getTranslations('safety');
+  const tp = await getTranslations('projects');
+  // Обложкой блока всегда стоит это фото; остальные доступны в лайтбоксе.
+  const COVER = '01_gyurjyan_security_03.webp';
+  const all = await getProjectPhotosWithDims('safety');
+  const photos = [...all].sort((a, b) => {
+    if (a.src.endsWith(COVER)) return -1;
+    if (b.src.endsWith(COVER)) return 1;
+    return 0;
+  });
 
   return (
     <section className="section dark-block safety">
@@ -17,15 +26,7 @@ export function Safety() {
         </Reveal>
 
         <div className="safety-grid">
-          <Reveal className="safety-media">
-            <Image
-              src={safetyPhoto}
-              alt={t('imageAlt')}
-              placeholder="blur"
-              sizes="(max-width: 900px) 100vw, 50vw"
-              className="safety-media__img"
-            />
-          </Reveal>
+          <SafetyGallery photos={photos} alt={t('imageAlt')} viewLabel={tp('viewPhotos')} />
 
           <Reveal className="safety-text" delay={0.08}>
             <article className="safety-block">
