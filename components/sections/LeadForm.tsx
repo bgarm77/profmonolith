@@ -18,7 +18,11 @@ const schema = z.object({
 type Status = 'idle' | 'sending' | 'success' | 'error';
 type FieldKey = 'name' | 'phone' | 'email' | 'project';
 
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+// Основное имя — NEXT_PUBLIC_WEB3FORMS_KEY (задано в Vercel). Фолбэк на
+// NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY — на случай альтернативного названия в окружении.
+const WEB3FORMS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ??
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 export function LeadForm() {
   const t = useTranslations('form');
@@ -33,6 +37,15 @@ export function LeadForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (!WEB3FORMS_KEY) {
+      console.error(
+        'Web3Forms: переменная NEXT_PUBLIC_WEB3FORMS_KEY не задана — заявка не будет отправлена.',
+      );
+      setStatus('error');
+      return;
+    }
+
     setStatus('sending');
     setErrors({});
 
