@@ -1361,8 +1361,9 @@ button {
 }
 .lic-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
   gap: clamp(16px, 2vw, 24px);
+  justify-content: center;
 }
 .lic-ph {
   aspect-ratio: 3 / 4;
@@ -1385,6 +1386,80 @@ button {
   font-family: var(--ff-tech);
   font-size: 11px;
   letter-spacing: 0.12em;
+}
+.lic-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--steel-light);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.lic-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--steel);
+  box-shadow: 0 14px 30px rgba(13, 24, 34, 0.12);
+}
+.lic-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 2100 / 1480;
+  background: var(--cream);
+  overflow: hidden;
+}
+.lic-card__media img {
+  transition: transform 0.3s ease;
+}
+.lic-card:hover .lic-card__media img {
+  transform: scale(1.04);
+}
+.lic-card__zoom {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(13, 24, 34, 0.72);
+  color: #fff;
+  font-family: var(--ff-tech);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.lic-card__zoom svg {
+  width: 14px;
+  height: 14px;
+  stroke: #fff;
+}
+.lic-card:hover .lic-card__zoom {
+  opacity: 1;
+  transform: none;
+}
+.lic-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+}
+.lic-card__code {
+  font-family: var(--ff-tech);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+}
+.lic-card__title {
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
 /* ============================================================
@@ -1754,9 +1829,6 @@ button {
   }
   .why__grid {
     grid-template-columns: 1fr;
-  }
-  .lic-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
   .hero__stats {
     grid-template-columns: repeat(2, 1fr);

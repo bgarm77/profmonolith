@@ -200,8 +200,13 @@
   "licenses": {
     "eyebrow": "Documents",
     "heading": "Licenses and certificates",
-    "lead": "Section in progress — document scans will be added.",
-    "soon": "SOON"
+    "view": "Enlarge",
+    "items": [
+      {
+        "title": "Construction license",
+        "code": "ՔՊԼ-000231"
+      }
+    ]
   },
   "form": {
     "eyebrow": "For developers",
